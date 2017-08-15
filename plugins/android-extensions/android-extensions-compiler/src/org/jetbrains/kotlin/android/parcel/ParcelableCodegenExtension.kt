@@ -224,7 +224,8 @@ open class ParcelableCodegenExtension : ExpressionCodegenExtension {
             properties: List<Pair<String, KotlinType>>
     ) {
         val containerAsmType = codegen.typeMapper.mapType(parcelableClass.defaultType)
-        val creatorAsmType = Type.getObjectType(containerAsmType.internalName + "\$Creator")
+        val creatorAsmType = Type.getObjectType(
+                codegen.typeMapper.typeMappingConfiguration.innerClassNameFactory(containerAsmType.internalName, "Creator"))
 
         val creatorClass = ClassDescriptorImpl(
                 parcelableClass.containingDeclaration, Name.identifier("Creator"), Modality.FINAL, ClassKind.CLASS, emptyList(),
