@@ -54,9 +54,9 @@ enum class LanguageFeature(
     InlineDefaultFunctionalParameters(KOTLIN_1_2),
     SoundSmartCastsAfterTry(KOTLIN_1_2),
     DeprecatedFieldForInvisibleCompanionObject(KOTLIN_1_2),
-    SafeCastCheckBoundSmartCasts(KOTLIN_1_2),
-    BooleanElvisBoundSmartCasts(KOTLIN_1_2),
-    CapturedInClosureSmartCasts(KOTLIN_1_2),
+    SafeCastCheckBoundSmartCasts(KOTLIN_1_1),
+    BooleanElvisBoundSmartCasts(KOTLIN_1_1),
+    CapturedInClosureSmartCasts(KOTLIN_1_1),
 
     // Experimental features
 
